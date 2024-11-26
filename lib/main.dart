@@ -4,22 +4,22 @@ import 'package:basic_ui_class_4/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: 'Routing and Navigation',
-
-    initialRoute: '/',
-    routes: {
-      '/': (context) => const MainApp(),
-      '/home': (context) =>const HomePage(),
-      '/home/layout': (context) => const Layoutpractice(),
-    },
-  ));
-  // runApp( const MaterialApp(
-  //   title:  'Navigation and Routing',
+  // runApp(MaterialApp(
   //   debugShowCheckedModeBanner: false,
-  //   home: MainApp(),
+  //   title: 'Routing and Navigation',
+
+  //   initialRoute: '/',
+  //   routes: {
+  //     '/': (context) => const MainApp(),
+  //     '/home': (context) =>const HomePage(),
+  //     '/home/layout': (context) => const Layoutpractice(),
+  //   },
   // ));
+  runApp( const MaterialApp(
+    title:  'Navigation and Routing',
+    debugShowCheckedModeBanner: false,
+    home: MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -33,15 +33,20 @@ class MainApp extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           title: const Center(child: Text("Main App")),
           actions: [
+            // ElevatedButton(onPressed: () {
+            //   Navigator.pushNamed(context, 
+            //   '/home',
+            //   arguments: 'Data From Home'
+            //   );
+            //   // print(result);
+            // }, 
+            // child:const Icon(Icons.home),
+            // ),
             ElevatedButton(onPressed: () {
-              Navigator.pushNamed(context, 
-              '/home',
-              arguments: 'Data From Home'
+              Navigator.push(context, 
+              MaterialPageRoute(builder: (context) =>const HomePage())
               );
-              // print(result);
-            }, 
-            child:const Icon(Icons.home),
-            ),
+            }, child:const Icon(Icons.home))
            
           ],
         ),

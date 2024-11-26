@@ -1,3 +1,4 @@
+import 'package:basic_ui_class_4/layoutpractice.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,14 +24,19 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.blueAccent,
         actions: [
-           ElevatedButton(onPressed: () {
-              Navigator.pushNamed(context, 
-              '/home/layout',
-              arguments: 'Data From Layout'
-              );
-            }, 
-            child:const Icon(Icons.tab),
-            ),
+          //  ElevatedButton(onPressed: () {
+          //     Navigator.pushNamed(context, 
+          //     '/home/layout',
+          //     arguments: 'Data From Layout'
+          //     );
+          //   }, 
+          //   child:const Icon(Icons.tab),
+          //   ),
+          ElevatedButton(onPressed: () {
+            Navigator.push(context, 
+            MaterialPageRoute(builder: (context) =>const Layoutpractice()),
+            );
+          }, child: const Icon(Icons.table_bar)),
         ],
       ),
       body: Container(
