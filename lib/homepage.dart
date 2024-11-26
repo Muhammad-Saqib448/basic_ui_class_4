@@ -22,6 +22,16 @@ class _HomePageState extends State<HomePage> {
         ),
         ),
         backgroundColor: Colors.blueAccent,
+        actions: [
+           ElevatedButton(onPressed: () {
+              Navigator.pushNamed(context, 
+              '/home/layout',
+              arguments: 'Data From Layout'
+              );
+            }, 
+            child:const Icon(Icons.tab),
+            ),
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
