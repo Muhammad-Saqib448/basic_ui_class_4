@@ -1,6 +1,7 @@
 // ignore: unused_import
 import 'package:basic_ui_class_4/layoutpractice.dart';
 import 'package:basic_ui_class_4/homepage.dart';
+import 'package:basic_ui_class_4/tabscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ void main() {
   runApp( const MaterialApp(
     title:  'Navigation and Routing',
     debugShowCheckedModeBanner: false,
-    home: MainApp(),
+    home: Tabs(),
   ));
 }
 
